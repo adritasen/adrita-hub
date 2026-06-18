@@ -250,6 +250,9 @@ section h2::after{
     margin:40px auto 0;
 
     transition:0.3s;
+
+    /* FIX */
+    flex-wrap:wrap;
 }
 
 .featured-song-card:hover{
@@ -265,10 +268,14 @@ section h2::after{
 
     border-radius:15px;
     border:2px solid #d4af37;
+
+    /* FIX */
+    flex-shrink:0;
 }
 
 .song-info{
     flex:1;
+    min-width:200px;
 }
 
 html{
@@ -377,5 +384,20 @@ footer{
     .card{
         width:90%;
         max-width:360px;
+    }
+
+    .featured-song-card{
+        flex-direction:column;
+        text-align:center;
+        gap:15px;
+    }
+
+    .featured-song-card img{
+        width:140px;
+        height:140px;
+    }
+
+    .song-info{
+        min-width:100%;
     }
 }
