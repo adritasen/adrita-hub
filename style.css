@@ -5,12 +5,31 @@
     font-family:'Poppins',sans-serif;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+img, div, section {
+    max-width: 100%;
+}
+
 body{
     background:#0d0d0d;
     color:white;
 }
 
 /* NAVBAR */
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: #d4af37;
+    cursor: pointer;
+}
+
 
 nav{
     display:flex;
@@ -151,8 +170,8 @@ nav a:hover{
 
 /* SECTIONS */
 
-section{
-    padding:100px 8%;
+section {
+    padding: 120px 8%;
 }
 
 section h2{
@@ -336,4 +355,87 @@ footer{
     color:#999;
 
     border-top:1px solid rgba(212,175,55,0.1);
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 768px) {
+      .main-container {
+        padding: 10px;
+    }
+
+      .card-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 360px;
+        transition: 0.3s ease;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 15px 5%;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 12px;
+        padding: 0;
+        margin: 0;
+        align-items: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-image img {
+        width: 260px;
+        max-width: 85%;
+        height: auto;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero h3 {
+        font-size: 1rem;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 12px;
+        padding: 0;
+        margin: 0;
+        align-items: center;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+    
 }

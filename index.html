@@ -22,6 +22,7 @@
             <h2>ADRITA HUB</h2>
 
         </div>
+        <div class="menu-toggle" id="menu-toggle">☰</div>
 
         <ul>
             <li><a href="#explore">Explore</a></li>
@@ -321,9 +322,19 @@
 
     </section>
 
+    <script>
+        const toggle = document.getElementById("menu-toggle");
+        const navLinks = document.querySelector("nav ul");
+
+        toggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    </script>
+
     <footer>
         <p>© 2026 Adrita Hub</p>
     </footer>
 
 </body>
 </html>
+
