@@ -23,14 +23,6 @@ body{
 
 /* NAVBAR */
 
-.menu-toggle {
-    display: none;
-    font-size: 28px;
-    color: #d4af37;
-    cursor: pointer;
-}
-
-
 nav{
     display:flex;
     justify-content:space-between;
@@ -42,9 +34,7 @@ nav{
     top:0;
 
     backdrop-filter:blur(10px);
-
     background:rgba(13,13,13,0.8);
-
     z-index:1000;
 }
 
@@ -68,6 +58,8 @@ nav a:hover{
     color:#d4af37;
 }
 
+/* LOGO */
+
 .logo-container{
     display:flex;
     align-items:center;
@@ -77,7 +69,6 @@ nav a:hover{
 .logo-container img{
     width:55px;
     height:55px;
-
     object-fit:contain;
 }
 
@@ -97,21 +88,17 @@ nav a:hover{
 
 .hero::before{
     content:"";
-
     position:absolute;
 
     width:500px;
     height:500px;
 
     background:rgba(212,175,55,0.08);
-
     border-radius:50%;
-
     filter:blur(100px);
 
     top:50%;
     right:10%;
-
     transform:translateY(-50%);
 
     z-index:-1;
@@ -150,7 +137,6 @@ nav a:hover{
     display:inline-block;
 
     margin-top:30px;
-
     padding:12px 28px;
 
     background:#d4af37;
@@ -158,7 +144,6 @@ nav a:hover{
 
     text-decoration:none;
     border-radius:30px;
-
     font-weight:600;
 }
 
@@ -170,15 +155,27 @@ nav a:hover{
 
 /* SECTIONS */
 
-section {
-    padding: 120px 8%;
+section{
+    padding:120px 8%;
 }
 
 section h2{
     text-align:center;
     margin-bottom:50px;
-
     color:#d4af37;
+}
+
+section h2::after{
+    content:"";
+    display:block;
+
+    width:80px;
+    height:3px;
+
+    background:#d4af37;
+    margin:12px auto 0;
+
+    border-radius:10px;
 }
 
 .section-subtitle{
@@ -212,13 +209,10 @@ section h2{
 
 .card{
     background:#181818;
-
     width:320px;
-
     padding:30px;
 
     border-radius:15px;
-
     border:1px solid rgba(212,175,55,0.2);
 
     transition:0.3s;
@@ -235,15 +229,11 @@ section h2{
 
 .card:hover{
     transform:translateY(-10px) scale(1.03);
-
     border-color:#d4af37;
-
     box-shadow:0 0 20px rgba(212,175,55,0.4);
 }
 
-.card h3{
-    margin-bottom:15px;
-}
+/* FEATURED CARD */
 
 .featured-song-card{
     display:flex;
@@ -251,15 +241,12 @@ section h2{
     gap:25px;
 
     background:#181818;
-
     border:1px solid rgba(212,175,55,0.2);
 
     border-radius:20px;
-
     padding:25px;
 
     max-width:850px;
-
     margin:40px auto 0 auto;
 
     transition:0.3s;
@@ -267,20 +254,16 @@ section h2{
 
 .featured-song-card:hover{
     transform:translateY(-5px);
-
     border-color:#d4af37;
-
     box-shadow:0 0 25px rgba(212,175,55,0.3);
 }
 
 .featured-song-card img{
     width:180px;
     height:180px;
-
     object-fit:cover;
 
     border-radius:15px;
-
     border:2px solid #d4af37;
 }
 
@@ -288,154 +271,96 @@ section h2{
     flex:1;
 }
 
-.song-info h3{
-    margin-bottom:15px;
-    font-size:1.6rem;
-}
-
-.song-info p{
-    margin-bottom:20px;
-    color:#cccccc;
-    line-height:1.7;
-}
-
-.contact-box{
-    transition:0.3s;
-}
-
-
-section{
-    padding:120px 8%;
-}
-
-section h2{
-    position:relative;
-
-    text-align:center;
-
-    margin-bottom:50px;
-
-    color:#d4af37;
-}
-
-section h2::after{
-    content:"";
-
-    display:block;
-
-    width:80px;
-    height:3px;
-
-    background:#d4af37;
-
-    margin:12px auto 0;
-
-    border-radius:10px;
-}
-
-#work{
-    background:rgba(212,175,55,0.03);
-
-    border-top:1px solid rgba(212,175,55,0.1);
-
-    border-bottom:1px solid rgba(212,175,55,0.1);
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
 /* FOOTER */
 
 footer{
     text-align:center;
-
     padding:50px;
 
     color:#999;
-
     border-top:1px solid rgba(212,175,55,0.1);
+}
+
+/* =========================
+   HAMBURGER MENU (NEW)
+========================= */
+
+/* hidden on desktop */
+.menu-toggle{
+    display:none;
+    font-size:28px;
+    color:#d4af37;
+    cursor:pointer;
 }
 
 /* MOBILE RESPONSIVENESS */
 
 @media (max-width: 768px) {
-      .main-container {
-        padding: 10px;
+
+    /* NAVBAR */
+    nav{
+        flex-direction:column;
+        align-items:center;
+        gap:12px;
+        padding:15px 5%;
+        text-align:center;
     }
 
-      .card-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
+    .menu-toggle{
+        display:block;
     }
 
-    .card {
-        width: 90%;
-        max-width: 360px;
-        transition: 0.3s ease;
+    nav ul{
+        display:none;
+        flex-direction:column;
+        gap:12px;
+        padding:0;
+        margin:0;
+        align-items:center;
     }
 
-    nav {
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-        padding: 15px 5%;
-        text-align: center;
+    nav ul.active{
+        display:flex;
     }
 
-    nav ul {
-        flex-direction: column;
-        gap: 12px;
-        padding: 0;
-        margin: 0;
-        align-items: center;
+    /* CARDS */
+    .card-container{
+        flex-direction:column;
+        align-items:center;
+        gap:12px;
     }
 
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        gap: 30px;
+    .card{
+        width:90%;
+        max-width:360px;
     }
 
-    .hero-text {
-        max-width: 100%;
+    /* HERO */
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        gap:30px;
     }
 
-    .hero-image img {
-        width: 260px;
-        max-width: 85%;
-        height: auto;
+    .hero-text{
+        max-width:100%;
     }
 
-    .hero h1 {
-        font-size: 2.5rem;
+    .hero-image img{
+        width:240px;
+        max-width:85%;
+        height:auto;
     }
 
-    .hero h3 {
-        font-size: 1rem;
+    .hero h1{
+        font-size:2.5rem;
     }
 
-    .hero p {
-        font-size: 0.95rem;
+    .hero h3{
+        font-size:1rem;
     }
 
-    .menu-toggle {
-        display: block;
+    .hero p{
+        font-size:0.95rem;
     }
-
-    nav ul {
-        display: none;
-        flex-direction: column;
-        gap: 12px;
-        padding: 0;
-        margin: 0;
-        align-items: center;
-    }
-
-    nav ul.active {
-        display: flex;
-    }
-    
 }
