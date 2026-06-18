@@ -271,6 +271,10 @@ section h2::after{
     flex:1;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 /* ================= FOOTER ================= */
 
 footer{
